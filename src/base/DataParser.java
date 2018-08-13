@@ -29,7 +29,7 @@ public class DataParser {
 
     public static HashMap<String, String> parse(String data) throws ArithmeticException
     {
-        HashMap<String, String> parseData = new HashMap<String, String>();
+        HashMap<String, String> parseData = new HashMap<>();
         String[] args = data.split("/",0);
         if(args.length%2 != 0)
         {
