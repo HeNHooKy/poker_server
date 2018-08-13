@@ -4,27 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class Command {
+class Command {
     private static List<Command> commands = new ArrayList<>();
 
     private String command;
-    private Consumer<String> consumer;
+    private Consumer<CommandPacket> consumer;
 
-    private void handle(String value) {
-        this.consumer.accept(value);
+    private void handle(CommandPacket packet) {
+        this.consumer.accept(packet);
     }
 
-    public Command(String command, Consumer<String> consumer) {
+    Command(String command, Consumer<CommandPacket> consumer) {
         this.command = command;
         this.consumer = consumer;
         commands.add(this);
     }
 
-    public void emitter(String command, String value) {
+    static void emitter(String command, CommandPacket packet) {
         for(Command c : commands) {
             command = command.trim();
             if(c.command.equals(command))
-                c.handle(value);
+                c.handle(packet);
         }
     }
 }
