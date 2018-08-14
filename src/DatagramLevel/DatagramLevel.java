@@ -14,12 +14,19 @@ public class DatagramLevel {
     private boolean running = true;
     private int bufferSize;
 
+    boolean running() {
+        return running;
+    }
+
     public DatagramLevel(int port, int bufferSize, String lang) {//Инициализация сервера начинается отсюда
         this.bufferSize = bufferSize;
         auth = new AuthorizationLevel(this, lang);
         try {
             socket = new DatagramSocket(port);
             receive();
+            PingPong.socket = socket;
+            PingPong.dl = this;
+            PingPong.ping();
             System.out.println("Server started on port: " + port);
         }   catch (SocketException e) {
             System.out.println("Can't to open socket on port " + port + ":" + e);
@@ -39,26 +46,24 @@ public class DatagramLevel {
     }
 
     private void receive() {//прослушиваем канал(сокет)
-        Thread receive = new Thread(new Runnable() {
-            @Override
-            public void run() {
+        Thread receive = new Thread(() -> {
                 while(running) {
                     byte[] data = new byte[bufferSize];
                     DatagramPacket packet = new DatagramPacket(data, data.length);
                     try {
                         socket.receive(packet);
-                        new Thread(new Runnable() {
-                            @Override
-                            public void run() {
-                                auth.receive(new String(packet.getData()), packet.getAddress(), packet.getPort());
-                            }
-                        }, "player").start();
 
+                        System.out.println("client: " + new String(packet.getData()));//Временная функция
+
+                        if(new String(packet.getData()).trim().equals("pong")) {
+                            new Thread(()-> PingPong.pong(packet)).start();
+                            continue;
+                        }
+                        new Thread(() -> auth.receive(new String(packet.getData()), packet.getAddress(), packet.getPort())).start();
                     }   catch (IOException e) {
                         System.err.println("Receive error: " + e);
                     }
                 }
-            }
         }, "receive");
         receive.start();
     }

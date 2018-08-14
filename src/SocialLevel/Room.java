@@ -43,7 +43,7 @@ public class Room {
     void join(Player sender) {
         this.players.add((sender));
         sender.write("system", "complete", lang.getProperty("join_room"));
-        write("system", lang.getProperty("player_joined_room")+":"+sender.name());
+        write("system", lang.getProperty("player_joined_room") + ":" + sender.name());
     }
 
     public void write(String type, String message) {

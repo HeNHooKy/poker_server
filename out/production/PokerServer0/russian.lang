@@ -1,1 +1,19 @@
 welcome_registration: Welcome to server
+already_in_room: you already in room
+not_in_room: you not in room
+user_not_found: find user is not found
+invite_null_room: room is not exist
+login_locked: login already used
+empty_pass: pass can't be empty
+welcome_login: welcome back
+wrong_log_pass: wrong password or login
+recipient_accept_friend: recipient accept you'r friend invite
+recipient_close_friend: recipient close you'r friend invite
+received_friend_request: friend request received
+room_already_exist: room with that name already exist
+room_not_found: searching room is not found
+join_room: you are join in room
+player_joined_room: in room join player
+room_invite: you have room invite
+invited_close_invite: recipient close invite
+connection_break: connection break

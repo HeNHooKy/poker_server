@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.util.function.Consumer;
 
 public class test {
     static DatagramSocket socket;
@@ -17,6 +16,12 @@ public class test {
                     byte[] data = new byte[1024];
                     DatagramPacket packet = new DatagramPacket(data, data.length);
                     socket.receive(packet);
+                    if(new String(packet.getData()).trim().equals("ping")) {
+                        data = "pong".getBytes();
+                        packet = new DatagramPacket(data, data.length);
+                        socket.send(packet);
+                        continue;
+                    }
                     System.out.println(new String(packet.getData()));
                 }   catch (IOException e) {
                     System.out.println(e);
@@ -40,7 +45,7 @@ public class test {
             socket = new DatagramSocket();
             socket.connect(InetAddress.getLocalHost(), 8000);
             listen.start();
-            String[] message = {"name", args[0], "pass", args[1] ,"command", "registration"};
+            String[] message = {"name", args[0], "pass", args[1] ,"command", "login"};
             send(DataParser.stringify(message));
             Thread.sleep(1000);
             String[] message1 = {"name", args[0] ,"command", "personal", "send-to", "hanji", "value", "Hello me"};
