@@ -12,8 +12,8 @@ import java.util.HashMap;
 import java.util.Properties;
 
 public class AuthorizationLevel {
+    public static Properties lang;
     private DatagramLevel socket;//for sending messages
-    private Properties lang;
     private CommandHandler commandHandler;
 
     //Скорее всего клиент не увидит прямых сообщений от сервера, но т.к. это возможно стоит установить язык хотябы на ту область, где запущен сервер
@@ -31,10 +31,16 @@ public class AuthorizationLevel {
     public void receive(String message, InetAddress address, int port) {
         HashMap<String, String> data = DataParser.parse(message);
         String name = data.get("name").trim();
-        String pass = data.get("pass").trim();
+
+        String pass;
+        if((pass = data.get("pass")) != null){
+            pass = pass.trim();
+        }   else {
+            pass = "";
+        }
+
         String command = data.get("command").trim();
         Player player = Authorization.search(address, port);
-
         if (player == null) {
             if (command.equals("registration")) {
                 if (!pass.equals("")) {

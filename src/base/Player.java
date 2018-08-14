@@ -1,9 +1,9 @@
 package base;
 
 import DatagramLevel.DatagramLevel;
+import SocialLevel.Room;
 
 import java.io.IOException;
-import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.util.UUID;
 
@@ -18,6 +18,7 @@ public class Player {
 
     //game
     private String name;
+    private Room room = null;
 
     public Player(String login, String password,InetAddress address, int port, DatagramLevel socket) {
         this.login = login;
@@ -27,25 +28,36 @@ public class Player {
         this.port = port;
         this.ID = UUID.randomUUID();
         this.socket = socket;
-
-
+        //Authorization.registration(this);
     }
 
     private String crypt(String password) {
         return password;
     }
 
+    public Room room() {
+        return room;
+    }
+
     public boolean equalsPass(String password) {
         return this.password.equals(crypt(password));
     }
 
-    public String name() {
-        return name;
+    public String login() {
+        return login;
+    }
+
+    public UUID ID() {
+        return this.ID;
     }
 
     public void connect(InetAddress address, int port) {
         this.address = address;
         this.port = port;
+    }
+
+    public void leave() {
+        this.room = null;
     }
 
     public InetAddress address() {

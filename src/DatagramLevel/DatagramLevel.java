@@ -11,7 +11,6 @@ import java.net.SocketException;
 public class DatagramLevel {
     private DatagramSocket socket;
     private AuthorizationLevel auth;
-    private Thread receive;
     private boolean running = true;
     private int bufferSize;
 
@@ -21,6 +20,7 @@ public class DatagramLevel {
         try {
             socket = new DatagramSocket(port);
             receive();
+            System.out.println("Server started on port: " + port);
         }   catch (SocketException e) {
             System.out.println("Can't to open socket on port " + port + ":" + e);
         }
@@ -39,7 +39,7 @@ public class DatagramLevel {
     }
 
     private void receive() {//прослушиваем канал(сокет)
-        receive = new Thread(new Runnable() {
+        Thread receive = new Thread(new Runnable() {
             @Override
             public void run() {
                 while(running) {

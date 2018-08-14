@@ -1,18 +1,53 @@
+import base.DataParser;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.util.function.Consumer;
 
 public class test {
+    static DatagramSocket socket;
 
-    private static void command(Consumer<String> consumer, String s) {
-        consumer.accept(s);
+    static Thread listen = new Thread(new Runnable() {
+        @Override
+        public void run() {
+            while(true) {
+                try {
+                    byte[] data = new byte[1024];
+                    DatagramPacket packet = new DatagramPacket(data, data.length);
+                    socket.receive(packet);
+                    System.out.println(new String(packet.getData()));
+                }   catch (IOException e) {
+                    System.out.println(e);
+                }
+            }
+        }
+    }, "listen");
+
+    static void send(String message) {
+        try {
+            byte[] data = message.getBytes();
+            DatagramPacket packet = new DatagramPacket(data, data.length);
+            socket.send(packet);
+        } catch (IOException e) {
+            System.out.println(e);
+        }
     }
 
     public static void main(String args[]) {
-        String string = "2047";
-        command((s)->{
-            if(s.equals("2048")) {
-                System.out.print(s);
-            }
-        }, string);
+        try {
+            socket = new DatagramSocket();
+            socket.connect(InetAddress.getLocalHost(), 8000);
+            listen.start();
+            String[] message = {"name", args[0], "pass", args[1] ,"command", "registration"};
+            send(DataParser.stringify(message));
+            Thread.sleep(1000);
+            String[] message1 = {"name", args[0] ,"command", "personal", "send-to", "hanjix", "value", "Hello me"};
+            send(DataParser.stringify(message1));
+        }   catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
 }

@@ -3,31 +3,32 @@ package AuthLevel;
 import base.Player;
 
 import java.net.InetAddress;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Authorization {
-    private static List<Player> allPlayers;//Заменяет бд на данном этапе разработки
-    private static List<Player> playersList;
+    private static List<Player> allPlayers = new ArrayList<>();//Заменяет бд на данном этапе разработки
+    private static List<Player> playersList = new ArrayList<>();
 
-    public static Player search(InetAddress address, int port) {   //После подключения бд переписать
+    static Player search(InetAddress address, int port) {   //После подключения бд переписать
         for(Player player : allPlayers) {
-            if(player.address().equals(address) && player.port() == port) {
+            if(player.address().equals(address) && (player.port() == port)) {
                 return player;
             }
         }
         return null;
     }
 
-    public static Player search(String name) {  //После подключения бд переписать
+    public static Player search(String login) {  //После подключения бд переписать
         for(Player player : allPlayers) {
-            if(player.name().equals(name)) {
+            if(player.login().equals(login)) {
                 return player;
             }
         }
         return null;
     }
 
-    public static void registration(Player player) {
+    static void registration(Player player) {
         allPlayers.add(player);
         playersList.add(player);
     }

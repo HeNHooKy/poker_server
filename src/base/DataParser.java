@@ -6,11 +6,12 @@ import java.util.Map;
 
 public class DataParser {
     public static String stringify(String[] data)
-    {
+    {//TODO(hanji): разобраться с парсером
         String str = "";
         for(int i = 0; i < data.length; i++)
         {
-            str += data[i].replace("/","\\") +
+            data[i] = data[i].replace("/","\\");
+            str += data[i] +
                     (data.length-1 == i ? "" : "/");
         }
         return str;
