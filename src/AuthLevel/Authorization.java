@@ -1,10 +1,11 @@
 package AuthLevel;
 
-import base.Player;
+import SocialLevel.Player;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Authorization {
     private static List<Player> allPlayers = new ArrayList<>();//Заменяет бд на данном этапе разработки
@@ -31,5 +32,14 @@ public class Authorization {
     static void registration(Player player) {
         allPlayers.add(player);
         playersList.add(player);
+    }
+
+    public static boolean onlineSearch(UUID ID) {
+        for(Player search : playersList) {
+            if(search.ID().equals(ID)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

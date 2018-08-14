@@ -43,8 +43,17 @@ public class test {
             String[] message = {"name", args[0], "pass", args[1] ,"command", "registration"};
             send(DataParser.stringify(message));
             Thread.sleep(1000);
-            String[] message1 = {"name", args[0] ,"command", "personal", "send-to", "hanjix", "value", "Hello me"};
+            String[] message1 = {"name", args[0] ,"command", "personal", "send-to", "hanji", "value", "Hello me"};
             send(DataParser.stringify(message1));
+
+            Thread.sleep(1000);
+            String[] message2 = {"name", args[0] ,"command", "create", "value", "Room_with_long_name"};
+            send(DataParser.stringify(message2));
+            Thread.sleep(1000);
+            String[] message3 = {"name", args[0] ,"command", "join", "value", "Room_with_long_name"};
+            send(DataParser.stringify(message3));
+
+
         }   catch (Exception e) {
             System.out.println(e);
         }

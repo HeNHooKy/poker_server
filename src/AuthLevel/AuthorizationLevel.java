@@ -3,7 +3,7 @@ package AuthLevel;
 import CommandLevel.CommandHandler;
 import DatagramLevel.DatagramLevel;
 import base.DataParser;
-import base.Player;
+import SocialLevel.Player;
 
 import java.io.FileInputStream;
 import java.io.IOException;

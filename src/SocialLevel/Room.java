@@ -1,7 +1,6 @@
 package SocialLevel;
 
 import AuthLevel.AuthorizationLevel;
-import base.Player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +14,20 @@ public class Room {
     private List<Player> players = new ArrayList<>();
     private static Properties lang = AuthorizationLevel.lang;
 
-    public Room(String name, Player admin) {
+    private Room(String name, Player admin) {
         players.add(admin);
         this.admin = admin;
         this.name = name;
+    }
+
+    public static void create(String name, Player creator) {
+        for(Room room : rooms) {
+            if(room.name.equals(name)) {
+                creator.write("system", "error", lang.getProperty("room_already_exist"));
+                return;
+            }
+        }
+        rooms.add(new Room(name, creator));
     }
 
     public static void join(String name, Player sender) {
@@ -31,9 +40,10 @@ public class Room {
         sender.write("system", "not-found", lang.getProperty("room_not_found"));
     }
 
-    private void join(Player sender) {
+    void join(Player sender) {
         this.players.add((sender));
         sender.write("system", "complete", lang.getProperty("join_room"));
+        write("system", lang.getProperty("player_joined_room")+":"+sender.name());
     }
 
     public void write(String type, String message) {

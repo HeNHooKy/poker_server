@@ -24,8 +24,7 @@ public class DataParser {
         {
             str += "/" + entry.getKey() + "/" + entry.getValue();
         }
-        str.replaceFirst("/","");
-        return str;
+        return str.replaceFirst("/","");
     }
 
     public static HashMap<String, String> parse(String data) throws ArithmeticException

@@ -1,1 +1,19 @@
 welcome_registration: Welcome to server
+already_in_room: null
+not_in_room: null
+user_not_found: null
+invite_null_room: null
+welcome_registration: null
+login_locked: null
+empty_pass: null
+welcome_login: null
+wrong_log_pass: null
+recipient_accept_friend: null
+recipient_close_friend: null
+received_friend_request: null
+room_already_exist: null
+room_not_found: null
+join_room: null
+player_joined_room: null
+room_invite: null
+invited_close_invite: null

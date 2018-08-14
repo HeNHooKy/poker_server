@@ -1,6 +1,6 @@
 package CommandLevel;
 
-import base.Player;
+import SocialLevel.Player;
 
 import java.util.HashMap;
 

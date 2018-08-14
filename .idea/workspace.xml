@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="414d9f45-a11c-4001-966e-d932e3b61cbc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SocialLevel/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Start.java" afterDir="false" />
+    <list default="true" id="414d9f45-a11c-4001-966e-d932e3b61cbc" name="Default" comment="I do first test. All's what i tested worked normal.">
+      <change afterPath="$PROJECT_DIR$/src/SocialLevel/Friend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SocialLevel/Money.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SocialLevel/RoomInvite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PokerServer0/AuthLevel/Authorization.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokerServer0/AuthLevel/Authorization.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PokerServer0/AuthLevel/AuthorizationLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokerServer0/AuthLevel/AuthorizationLevel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PokerServer0/CommandLevel/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokerServer0/CommandLevel/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PokerServer0/CommandLevel/CommandHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokerServer0/CommandLevel/CommandHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PokerServer0/DatagramLevel/DatagramLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokerServer0/DatagramLevel/DatagramLevel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PokerServer0/base/DataParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokerServer0/base/DataParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PokerServer0/base/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokerServer0/base/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PokerServer0/russian.lang" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokerServer0/russian.lang" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PokerServer0/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PokerServer0/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PokerServer0/base/Player.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AuthLevel/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthLevel/Authorization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AuthLevel/AuthorizationLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthLevel/AuthorizationLevel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommandLevel/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandLevel/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatagramLevel/DatagramLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatagramLevel/DatagramLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CommandLevel/CommandPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommandLevel/CommandPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocialLevel/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SocialLevel/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/DataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/DataParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SocialLevel/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/russian.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/russian.lang" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
@@ -43,26 +37,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7836" />
-          <entry key="lang" value="76" />
+          <entry key="java" value="15822" />
+          <entry key="lang" value="214" />
+          <entry key="txt" value="125" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7836" />
-          <entry key="PLAIN_TEXT" value="76" />
+          <entry key="JAVA" value="15822" />
+          <entry key="PLAIN_TEXT" value="339" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="35" />
-          <entry key="lang" value="2" />
+          <entry key="java" value="69" />
+          <entry key="lang" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="35" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="JAVA" value="69" />
+          <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -70,55 +65,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/base/DataParser.java">
+        <entry file="file://$PROJECT_DIR$/src/russian.lang">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-675">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AuthLevel/AuthorizationLevel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AuthLevel/Authorization.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="12" column="93" selection-start-line="12" selection-start-column="93" selection-end-line="12" selection-end-column="93" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CommandLevel/CommandHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-615">
-              <caret line="19" column="85" selection-start-line="19" selection-start-column="85" selection-end-line="19" selection-end-column="85" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,22 +86,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CommandLevel/Command.java">
+        <entry file="file://$PROJECT_DIR$/src/SocialLevel/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/base/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="208">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,11 +103,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>welcome_login</find>
+    </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
@@ -169,6 +120,11 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="hanji &lt;henhooky@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -179,21 +135,28 @@
         <option value="$PROJECT_DIR$/src/CommandLevel/CommandEmmiter.java" />
         <option value="$PROJECT_DIR$/src/CommandLevel/CommandEmitter.java" />
         <option value="$PROJECT_DIR$/src/CommandLevel/CommandPacket.java" />
-        <option value="$PROJECT_DIR$/src/SocialLevel/Room.java" />
         <option value="$PROJECT_DIR$/src/DatagramLevel/DatagramLevel.java" />
         <option value="$PROJECT_DIR$/src/Start.java" />
-        <option value="$PROJECT_DIR$/src/base/DataParser.java" />
-        <option value="$PROJECT_DIR$/src/russian.lang" />
-        <option value="$PROJECT_DIR$/src/base/Player.java" />
-        <option value="$PROJECT_DIR$/src/test.java" />
         <option value="$PROJECT_DIR$/src/CommandLevel/Command.java" />
-        <option value="$PROJECT_DIR$/src/CommandLevel/CommandHandler.java" />
-        <option value="$PROJECT_DIR$/src/AuthLevel/AuthorizationLevel.java" />
+        <option value="$PROJECT_DIR$/src/base/DataParser.java" />
+        <option value="$PROJECT_DIR$/src/SocialLevel/FriendsShip.java" />
         <option value="$PROJECT_DIR$/src/AuthLevel/Authorization.java" />
+        <option value="$PROJECT_DIR$/src/friendsTest.java" />
+        <option value="$PROJECT_DIR$/src/PlayerTest.java" />
+        <option value="$PROJECT_DIR$/src/base/Player.java" />
+        <option value="$PROJECT_DIR$/src/SocialLevel/Friend.java" />
+        <option value="$PROJECT_DIR$/src/SocialLevel/RoomInvite.java" />
+        <option value="$PROJECT_DIR$/src/SocialLevel/Money.java" />
+        <option value="$PROJECT_DIR$/src/SocialLevel/Player.java" />
+        <option value="$PROJECT_DIR$/src/CommandLevel/CommandHandler.java" />
+        <option value="$PROJECT_DIR$/src/SocialLevel/Room.java" />
+        <option value="$PROJECT_DIR$/src/AuthLevel/AuthorizationLevel.java" />
+        <option value="$PROJECT_DIR$/src/russian.lang" />
+        <option value="$PROJECT_DIR$/src/test.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="710" />
     <option name="width" value="735" />
     <option name="height" value="870" />
@@ -222,30 +185,6 @@
               <item name="poker_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="poker_server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AuthLevel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="poker_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="poker_server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="poker_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="poker_server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CommandLevel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="poker_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="poker_server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="DatagramLevel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="poker_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="poker_server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="SocialLevel" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -255,7 +194,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534237920789" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534270919254" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -342,7 +281,24 @@
       <option name="presentableId" value="Default" />
       <updated>1534182755564</updated>
     </task>
+    <task id="LOCAL-00001" summary="I do first test. All's what i tested worked normal.">
+      <created>1534238103262</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1534238103263</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -361,7 +317,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32907802" />
@@ -379,24 +335,77 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="I do first test. All's what i tested worked normal." />
+    <option name="LAST_COMMIT_MESSAGE" value="I do first test. All's what i tested worked normal." />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/package-info.java" />
-    <entry file="file://$PROJECT_DIR$/src/CommandLevel/CommandPacket.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="149">
+          <caret line="843" selection-start-line="843" selection-end-line="843" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocialLevel/FriendsShip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="75" selection-start-line="75" selection-end-line="75" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+            <element signature="e#1288#1289#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1341#1342#0" expanded="true" />
+            <element signature="e#1391#1392#0" expanded="true" />
+            <element signature="e#1451#1452#0" expanded="true" />
+            <element signature="e#1480#1481#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1940#1941#0" expanded="true" />
+            <element signature="e#1972#1973#0" expanded="true" />
+            <element signature="e#2008#2009#0" expanded="true" />
+            <element signature="e#2043#2044#0" expanded="true" />
+            <element signature="e#2068#2069#0" expanded="true" />
+            <element signature="e#2100#2101#0" expanded="true" />
+            <element signature="e#2133#2134#0" expanded="true" />
+            <element signature="e#2191#2192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/friendsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/function/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="108">
           <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/DataParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -407,91 +416,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Thread.java">
+    <entry file="file://$PROJECT_DIR$/src/CommandLevel/CommandHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="843" selection-start-line="843" selection-end-line="843" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatagramLevel/DatagramLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="2180">
+          <caret line="109" column="82" selection-start-line="109" selection-start-column="66" selection-end-line="109" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SocialLevel/Room.java">
+    <entry file="file://$PROJECT_DIR$/src/CommandLevel/CommandPacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="180">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/russian.lang">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="39" lean-forward="true" selection-start-column="39" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/base/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/base/DataParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-675">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CommandLevel/Command.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="-55">
+          <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CommandLevel/CommandHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/DatagramLevel/DatagramLevel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-615">
-          <caret line="19" column="85" selection-start-line="19" selection-start-column="85" selection-end-line="19" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AuthLevel/AuthorizationLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+        <state relative-caret-position="631">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -500,8 +458,104 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AuthLevel/Authorization.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="12" column="93" selection-start-line="12" selection-start-column="93" selection-end-line="12" selection-end-column="93" />
+        <state relative-caret-position="180">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AuthLevel/AuthorizationLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1291">
+          <caret line="75" column="135" lean-forward="true" selection-start-line="75" selection-start-column="123" selection-end-line="75" selection-end-column="137" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocialLevel/Friend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="65" column="102" selection-start-line="65" selection-start-column="80" selection-end-line="65" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocialLevel/Money.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocialLevel/RoomInvite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="24" column="78" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocialLevel/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1515">
+          <caret line="88" column="98" selection-start-line="88" selection-start-column="75" selection-end-line="88" selection-end-column="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1552#1553#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1662#1663#0" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#1743#1744#0" expanded="true" />
+            <element signature="e#1773#1774#0" expanded="true" />
+            <element signature="e#3878#3879#0" expanded="true" />
+            <element signature="e#3913#3914#0" expanded="true" />
+            <element signature="e#3938#3939#0" expanded="true" />
+            <element signature="e#3970#3971#0" expanded="true" />
+            <element signature="e#4003#4004#0" expanded="true" />
+            <element signature="e#4061#4062#0" expanded="true" />
+            <element signature="e#4546#4547#0" expanded="true" />
+            <element signature="e#4577#4578#0" expanded="true" />
+            <element signature="e#4619#4620#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="e#4675#4676#0" expanded="true" />
+            <element signature="e#4702#4703#0" expanded="true" />
+            <element signature="e#4828#4829#0" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/russian.lang">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SocialLevel/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
