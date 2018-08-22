@@ -3,6 +3,7 @@ package SocialLevel;
 import AuthLevel.Authorization;
 import AuthLevel.AuthorizationLevel;
 import DatagramLevel.DatagramLevel;
+import GameLevel.Chair;
 import base.DataParser;
 
 import java.io.IOException;
@@ -31,6 +32,8 @@ public class Player {
     private String name;
     private Room room = null;
     private RoomInvite invite;
+    private Money money;
+    private Chair chair;
 
     public Player(String login, String password,InetAddress address, int port, DatagramLevel socket) {
         this.login = login;
@@ -41,6 +44,10 @@ public class Player {
         this.ID = UUID.randomUUID();
         this.socket = socket;
         //Authorization.registration(this);
+    }
+
+    public Money money() {
+        return money;
     }
 
     public void receiveInvite(Room room, Player sender) {

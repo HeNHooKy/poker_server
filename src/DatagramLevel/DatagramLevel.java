@@ -53,7 +53,7 @@ public class DatagramLevel {
                     try {
                         socket.receive(packet);
 
-                        System.out.println("client: " + new String(packet.getData()));//Временная функция
+                        //System.out.println("client: " + new String(packet.getData()));//Временная функция
 
                         if(new String(packet.getData()).trim().equals("pong")) {
                             new Thread(()-> PingPong.pong(packet)).start();

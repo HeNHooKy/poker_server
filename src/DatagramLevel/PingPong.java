@@ -8,6 +8,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class PingPong {//Проверяем подключен ли клиент. Если из 3 сообщений ни одно не вернет pong -> клиент отключен
     static DatagramSocket socket;
@@ -20,7 +21,6 @@ public class PingPong {//Проверяем подключен ли клиент
         Thread ping = new Thread(()->{
             while(dl.running()) {
                 for(Client client : clients) {
-                    System.out.println(client.port());
                     new Thread(()-> {
                         if(client.attempt()) {
                             byte[] data = "ping".getBytes();
@@ -71,7 +71,25 @@ public class PingPong {//Проверяем подключен ли клиент
         return null;
     }
 
-    public static void update(InetAddress address, int port) {
-        clients.add(new Client(address, port));
+    private static Client search(UUID ID) {
+        for(Client client : clients) {
+            if(client.ID().equals(ID)) {
+                return client;
+            }
+        }
+        return null;
+    }
+
+    public static void update(InetAddress address, int port, UUID ID) {
+        Client old;
+        if((old = search(ID)) != null) {
+            System.out.println("server close connection with client:" + old.address() + ":" + old.port() + "; because get new connection: " + address + ":" + port);
+            Authorization.downByIp(old.address(), old.port());
+            clients.remove(old);
+
+            clients.add(new Client(address, port, ID));
+        }   else {
+            clients.add(new Client(address, port, ID));
+        }
     }
 }

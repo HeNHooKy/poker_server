@@ -1,11 +1,13 @@
 package DatagramLevel;
 
 import java.net.InetAddress;
+import java.util.UUID;
 
 class Client {
     private InetAddress address;
     private int port;
     private int attempt;
+    private UUID ID;
 
     InetAddress address() {
         return address;
@@ -15,9 +17,14 @@ class Client {
         return port;
     }
 
-    Client(InetAddress address, int port) {
+    UUID ID() {
+        return ID;
+    }
+
+    Client(InetAddress address, int port, UUID ID) {
         this.address = address;
         this.port = port;
+        this.ID = ID;
         this.attempt = 0;
     }
 
@@ -26,7 +33,6 @@ class Client {
     }
 
     boolean attempt() {
-        System.out.println(attempt);
         return (attempt++) < 3;
     }
 }

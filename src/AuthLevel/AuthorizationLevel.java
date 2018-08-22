@@ -50,7 +50,7 @@ public class AuthorizationLevel {
                         player = new Player(name, pass, address, port, socket);
                         Authorization.registration(player);
                         player.write("system","access",lang.getProperty("welcome_registration"));
-                        PingPong.update(address, port); //Независимая регистрация нового подключения
+                        PingPong.update(address, port, player.ID()); //Независимая регистрация нового подключения
                     } else {
                         try {
                             String[] preStr = {"name", name, "type", "system", "message-type", "error", "value", lang.getProperty("login_locked")};
@@ -73,7 +73,8 @@ public class AuthorizationLevel {
                     if (player.equalsPass(pass)) {
                         player.connect(address, port);
                         player.write("system","access",lang.getProperty("welcome_login"));
-                        PingPong.update(address, port); //Независимая регистрация нового подключения
+                        PingPong.update(address, port, player.ID()); //Независимая регистрация нового подключения
+                        return;
                     }
                 }
                 try {

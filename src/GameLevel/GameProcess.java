@@ -1,4 +1,12 @@
 package GameLevel;
 
-public class GameProcess {
+import java.util.function.UnaryOperator;
+
+class GameProcess {
+    String name;
+    GameProcess(String limit, UnaryOperator<GameProcess> process) {
+
+    }
+
+
 }

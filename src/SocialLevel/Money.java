@@ -1,21 +1,29 @@
 package SocialLevel;
 
+import GameLevel.Chip;
+
 public class Money {
     private int green;
-    private int gold;
 
     public Money() {
         this.green = 0;
-        this.gold = 0;
     }
 
-    void greenSend(Money pay, int count) {
-        this.green -= count;
-        pay.green += count;
+    public void greenGet(int count) {
+        this.green += count;
     }
 
-    void goldSend(Money pay, int count) {
-        this.gold -= count;
-        pay.gold += count;
+    public void greenSend(Money money, int count) {
+        if(this.green >= count) {
+            this.green -= count;
+            money.green += count;
+        }
+    }
+
+    public void greenSend(Chip chip, int count, int course) {//переводит зеленые в фишки по курсу, где count сумма перечисления в зеленых
+        if(this.green >= count) {
+            this.green -= count;
+            chip.get(count*course);
+        }
     }
 }

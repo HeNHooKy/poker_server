@@ -1,6 +1,7 @@
 package SocialLevel;
 
 import AuthLevel.AuthorizationLevel;
+import GameLevel.Table;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,7 @@ public class Room {
 
     private String name;
     private Player admin;
+    private Table table;
     private List<Player> players = new ArrayList<>();
     private static Properties lang = AuthorizationLevel.lang;
 
